@@ -1,0 +1,781 @@
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(117): col: 36 Warning: parameter 'y' has no type declaration.
+
+		static private function Noise(x, y):Number
+		                                 ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(119): col: 8 Warning: variable 'n' has no type declaration.
+
+			var n = x + y * 57;
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(124): col: 44 Warning: parameter 'y' has no type declaration.
+
+		static private function SmoothedNoise(x, y):Number
+		                                         ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(126): col: 8 Warning: variable 'corners' has no type declaration.
+
+			var corners = ( Noise(x-1, y-1)+Noise(x+1, y-1)+Noise(x-1, y+1)+Noise(x+1, y+1) ) / 16;
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(127): col: 8 Warning: variable 'sides' has no type declaration.
+
+			var sides	 = ( Noise(x-1, y)	+Noise(x+1, y)	+Noise(x, y-1)	+Noise(x, y+1) ) /	8;
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(128): col: 8 Warning: variable 'center' has no type declaration.
+
+			var center	=	Noise(x, y) / 4;
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(132): col: 48 Warning: parameter 'y' has no type declaration.
+
+		static private function InterpolatedNoise(x, y):Number
+		                                             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(134): col: 8 Warning: variable 'integer_X' has no type declaration.
+
+			var integer_X		= Math.floor(x);
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(135): col: 8 Warning: variable 'fractional_X' has no type declaration.
+
+			var fractional_X = x - integer_X;
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(137): col: 8 Warning: variable 'integer_Y' has no type declaration.
+
+			var integer_Y		= Math.floor(y);
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(138): col: 8 Warning: variable 'fractional_Y' has no type declaration.
+
+			var fractional_Y = y - integer_Y;
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(140): col: 8 Warning: variable 'v1' has no type declaration.
+
+			var v1 = SmoothedNoise(integer_X,		 integer_Y);
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(141): col: 8 Warning: variable 'v2' has no type declaration.
+
+			var v2 = SmoothedNoise(integer_X + 1, integer_Y);
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(142): col: 8 Warning: variable 'v3' has no type declaration.
+
+			var v3 = SmoothedNoise(integer_X,		 integer_Y + 1);
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(143): col: 8 Warning: variable 'v4' has no type declaration.
+
+			var v4 = SmoothedNoise(integer_X + 1, integer_Y + 1);
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(145): col: 8 Warning: variable 'i1' has no type declaration.
+
+			var i1 = Interpolate(v1 , v2 , fractional_X);
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(146): col: 8 Warning: variable 'i2' has no type declaration.
+
+			var i2 = Interpolate(v3 , v4 , fractional_X);
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(151): col: 45 Warning: parameter 'y' has no type declaration.
+
+		static private function PerlinNoise_2D(x, y):Number
+		                                          ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(153): col: 9 Warning: variable 'total' has no type declaration.
+
+				var total = 0;
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(154): col: 9 Warning: variable 'p' has no type declaration.
+
+				var p = 0.25;
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(155): col: 9 Warning: variable 'n' has no type declaration.
+
+				var n = 3;
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(157): col: 15 Warning: variable 'i' has no type declaration.
+
+				for ( var i = 0; i <= n; i++ )
+				          ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(159): col: 11 Warning: variable 'frequency' has no type declaration.
+
+						var frequency = Math.pow(2, i);
+						    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(160): col: 11 Warning: variable 'amplitude' has no type declaration.
+
+						var amplitude = Math.pow(p, i);
+						    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(168): col: 45 Warning: parameter 'x' has no type declaration.
+
+		static private function Interpolate(a, b, x):Number
+		                                          ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(170): col: 8 Warning: variable 'ft' has no type declaration.
+
+			var ft = x * Math.PI;
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(171): col: 8 Warning: variable 'f' has no type declaration.
+
+			var f = (1 - Math.cos(ft)) * .5;
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(175): col: 38 Warning: parameter 'aValue' has no type declaration.
+
+		static public function randomSeed( aValue )
+		                                   ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(176): col: 1 Warning: return value for function 'randomSeed' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PMath.as(180): col: 40 Warning: parameter 'aMax' has no type declaration.
+
+		static public function random( aMin, aMax = null ):Number
+		                                     ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Tokenizer.as(16): col: 48 Warning: return value for function 'load' has no type declaration.
+
+		public function load(s:String = '', l:int = 1) {
+		                                             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Tokenizer.as(30): col: 10 Warning: variable 'input' has no type declaration.
+
+					var input = source.substring(peekCursor);
+					    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Tokenizer.as(31): col: 10 Warning: variable 'match' has no type declaration.
+
+					var match = (onSameLine ? /^[ \t]+/ : /^\s+/)(input);
+					    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Tokenizer.as(33): col: 11 Warning: variable 'spaces' has no type declaration.
+
+						var spaces = match[0];
+						    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Tokenizer.as(43): col: 10 Warning: variable 'comment' has no type declaration.
+
+					var comment = match[0];
+					    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Tokenizer.as(153): col: 36 Warning: return value for function 'currentToken' has no type declaration.
+
+		public function get currentToken() { return _currentToken; }
+		                                 ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/TokenType.as(63): col: 62 Warning: null used where a int value was expected.
+
+		public static const CALL:TokenType = new TokenType('CALL', null, 2);
+		                                                           ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/TokenType.as(64): col: 80 Warning: null used where a int value was expected.
+
+		public static const NEW_WITH_ARGS:TokenType = new TokenType('NEW_WITH_ARGS', null, 2);
+		                                                                             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/TokenType.as(66): col: 74 Warning: null used where a int value was expected.
+
+		public static const ARRAY_INIT:TokenType = new TokenType('ARRAY_INIT', null, 1);
+		                                                                       ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/TokenType.as(67): col: 76 Warning: null used where a int value was expected.
+
+		public static const OBJECT_INIT:TokenType = new TokenType('OBJECT_INIT', null, 1);
+		                                                                         ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/TokenType.as(69): col: 64 Warning: null used where a int value was expected.
+
+		public static const GROUP:TokenType = new TokenType('GROUP', null, 1);
+		                                                             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Token.as(24): col: 25 Warning: return value for function 'debug' has no type declaration.
+
+		public function debug() {
+		                      ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/statements/FunctionDefinition.as(27): col: 3 Warning: return value for function 'anonymous' has no type declaration.
+
+				{
+		^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/statements/FunctionDefinition.as(51): col: 2 Warning: return value for function 'anonymous' has no type declaration.
+
+			{
+	^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/statements/FunctionDefinition.as(58): col: 14 Warning: variable 'i' has no type declaration.
+
+				for (var i in args)
+				         ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(23): col: 2 Warning: return value for function 'anonymous' has no type declaration.
+
+			{
+	^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/statements/Block.as(14): col: 1 Warning: return value for function 'append' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/statements/Block.as(22): col: 1 Warning: return value for function 'execute' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/statements/Reference.as(43): col: 9 Warning: Duplicate variable definition.
+
+				var base:Object = c.scope;
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/statements/Operation.as(48): col: 45 Warning: The instanceof operator is deprecated, use the is operator instead.
+
+			    case TokenType.INSTANCEOF:		return a instanceof b;
+			                              		         ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Parser.as(57): col: 10 Warning: Duplicate variable definition.
+
+					var thenBlock:Block = parseStatement();
+					    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Parser.as(64): col: 11 Warning: Duplicate variable definition.
+
+						var elseBlock:Block = parseStatement();
+						    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Parser.as(78): col: 9 Warning: Duplicate variable definition.
+
+				var condition:IExecutable = parseExpression(TokenType.RIGHT_PAREN);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Parser.as(85): col: 10 Warning: Duplicate variable definition.
+
+					var body:Block = parseStatement();
+					    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Parser.as(113): col: 9 Warning: Duplicate variable definition.
+
+				var condition:IExecutable = parseExpression(TokenType.SEMICOLON);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Parser.as(120): col: 10 Warning: Duplicate variable definition.
+
+					var body:Block = parseBlock(TokenType.RIGHT_CURLY);
+					    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Parser.as(123): col: 10 Warning: Duplicate variable definition.
+
+					var body:Block = parseStatement();
+					    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Parser.as(481): col: 9 Warning: Duplicate variable definition.
+
+				var isArray:Boolean = tokenizer.peek(2).match(TokenType.ARRAY_DIMENSION);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/parser/Parser.as(509): col: 21 Warning: Duplicate variable definition.
+
+						for each (var i:* in tmpOperands)
+						              ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/ArrayList.as(13): col: 14 Warning: variable 'i' has no type declaration.
+
+			for ( var i = 0; i < size1; i++ )
+			          ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/ArrayList.as(21): col: 16 Warning: variable 'j' has no type declaration.
+
+					for ( var j = 0; j < size2; j++ )
+					          ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/ArrayList.as(29): col: 18 Warning: variable 'k' has no type declaration.
+
+							for ( var k = 0; k < size3; k++ )
+							          ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/ArrayList.as(44): col: 24 Warning: parameter 'i' has no type declaration.
+
+		public function get( i ):*
+		                     ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/ArrayList.as(49): col: 27 Warning: parameter 'i' has no type declaration.
+
+		public function remove( i ):*
+		                        ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/ArrayList.as(54): col: 24 Warning: parameter 'item' has no type declaration.
+
+		public function add( item ):void
+		                     ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/ArrayList.as(56): col: 14 Warning: variable 'i' has no type declaration.
+
+			for ( var i = 0; this[ i ] != undefined; i++ );
+			          ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/ArrayList.as(62): col: 8 Warning: variable 'a' has no type declaration.
+
+			var a = new ArrayList( this.length );
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/ArrayList.as(63): col: 14 Warning: variable 'i' has no type declaration.
+
+			for ( var i = 0; i < this.length; i++ )
+			          ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing.as(20): col: 28 Error: Type was not found or was not a compile-time constant: boolean.
+
+			public static var DEBUG:boolean = false;       //ddc
+			                        ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PImage.as(54): col: 25 Warning: parameter 'file' has no type declaration.
+
+		public function save( file )
+		                      ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PImage.as(55): col: 1 Warning: return value for function 'save' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PImage.as(61): col: 32 Warning: return value for function 'mask' has no type declaration.
+
+		public function mask(m:PImage) {
+		                             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PImage.as(65): col: 30 Warning: return value for function 'loadPixels' has no type declaration.
+
+		public function loadPixels() {
+		                           ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PImage.as(73): col: 32 Warning: return value for function 'updatePixels' has no type declaration.
+
+		public function updatePixels() {
+		                             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PApplet.as(71): col: 1 Warning: return value for function 'onMouseMove' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PApplet.as(88): col: 1 Warning: return value for function 'onMouseDown' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PApplet.as(103): col: 1 Warning: return value for function 'onMouseUp' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PApplet.as(120): col: 1 Warning: return value for function 'onKeyDown' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PApplet.as(141): col: 1 Warning: return value for function 'onKeyUp' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PApplet.as(158): col: 1 Warning: return value for function 'onEnterFrame' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(30): col: 16 Warning: variable 'PI' has no type declaration.
+
+		public const PI = Math.PI;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(31): col: 16 Warning: variable 'TWO_PI' has no type declaration.
+
+		public const TWO_PI = 2 * Math.PI;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(32): col: 16 Warning: variable 'HALF_PI' has no type declaration.
+
+		public const HALF_PI = Math.PI / 2;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(33): col: 16 Warning: variable 'P2D' has no type declaration.
+
+		public const P2D = 2;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(34): col: 16 Warning: variable 'P3D' has no type declaration.
+
+		public const P3D = 3;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(35): col: 16 Warning: variable 'CORNER' has no type declaration.
+
+		public const CORNER = 0;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(36): col: 16 Warning: variable 'RADIUS' has no type declaration.
+
+		public const RADIUS = 1;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(37): col: 16 Warning: variable 'CENTER_RADIUS' has no type declaration.
+
+		public const CENTER_RADIUS = 1;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(38): col: 16 Warning: variable 'CENTER' has no type declaration.
+
+		public const CENTER = 2;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(39): col: 16 Warning: variable 'POLYGON' has no type declaration.
+
+		public const POLYGON = 2;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(40): col: 16 Warning: variable 'QUADS' has no type declaration.
+
+		public const QUADS = 5;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(41): col: 16 Warning: variable 'TRIANGLES' has no type declaration.
+
+		public const TRIANGLES = 6;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(42): col: 16 Warning: variable 'POINTS' has no type declaration.
+
+		public const POINTS = 7;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(43): col: 16 Warning: variable 'LINES' has no type declaration.
+
+		public const LINES = 8;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(44): col: 16 Warning: variable 'TRIANGLE_STRIP' has no type declaration.
+
+		public const TRIANGLE_STRIP = 9;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(45): col: 16 Warning: variable 'TRIANGLE_FAN' has no type declaration.
+
+		public const TRIANGLE_FAN = 4;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(46): col: 16 Warning: variable 'QUAD_STRIP' has no type declaration.
+
+		public const QUAD_STRIP = 3;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(47): col: 16 Warning: variable 'CORNERS' has no type declaration.
+
+		public const CORNERS = 10;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(48): col: 16 Warning: variable 'CLOSE' has no type declaration.
+
+		public const CLOSE = true;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(49): col: 16 Warning: variable 'RGB' has no type declaration.
+
+		public const RGB = 1;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(50): col: 16 Warning: variable 'HSB' has no type declaration.
+
+		public const HSB = 2;
+		             ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(73): col: 15 Warning: variable 'getLoaded' has no type declaration.
+
+		private var getLoaded;
+		            ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(138): col: 9 Warning: variable 'a' has no type declaration.
+
+				var a = getColor(args[3], opacityRange);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(141): col: 9 Warning: variable 'colors' has no type declaration.
+
+				var colors = (curColorMode == HSB) ?
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(144): col: 9 Warning: variable 'r' has no type declaration.
+
+				var r = getColor(colors[0], redRange);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(145): col: 9 Warning: variable 'g' has no type declaration.
+
+				var g = getColor(colors[1], greenRange);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(146): col: 9 Warning: variable 'b' has no type declaration.
+
+				var b = getColor(colors[2], blueRange);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(166): col: 35 Warning: parameter 'b' has no type declaration.
+
+		private function HSBtoRGB(h, s, b):Array {
+		                                ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(171): col: 9 Warning: variable 'hue' has no type declaration.
+
+				var hue = h % 360;
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(172): col: 9 Warning: variable 'f' has no type declaration.
+
+				var f = hue % 60;
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(173): col: 9 Warning: variable 'br' has no type declaration.
+
+				var br = Math.round(b / 100 * 255);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(174): col: 9 Warning: variable 'p' has no type declaration.
+
+				var p = Math.round((b * (100 - s)) / 10000 * 255);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(175): col: 9 Warning: variable 'q' has no type declaration.
+
+				var q = Math.round((b * (6000 - s * f)) / 600000 * 255);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(176): col: 9 Warning: variable 't' has no type declaration.
+
+				var t = Math.round((b * (6000 - s * (60 - f))) / 600000 * 255);
+				    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(189): col: 38 Warning: parameter 'range' has no type declaration.
+
+		private function getColor( aValue, range ):Number {
+		                                   ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(193): col: 46 Warning: parameter 'mode' has no type declaration.
+
+		public function createImage( w:int, h:int, mode = null ):PImage
+		                                           ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(214): col: 34 Warning: return value for function 'getImage' has no type declaration.
+
+		private function getImage( img ) {
+		                               ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(244): col: 1 Warning: return value for function 'image' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(350): col: 31 Warning: parameter 'type' has no type declaration.
+
+		public function beginShape( type = POLYGON )
+		                            ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(351): col: 1 Warning: return value for function 'beginShape' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(358): col: 29 Warning: parameter 'close' has no type declaration.
+
+		public function endShape( close = true )
+		                          ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(359): col: 1 Warning: return value for function 'endShape' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(370): col: 66 Warning: parameter 'y3' has no type declaration.
+
+		public function vertex( x, y, x2 = null, y2 = null, x3 = null, y3 = null )
+		                                                               ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(371): col: 1 Warning: return value for function 'vertex' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(469): col: 49 Warning: parameter 'y2' has no type declaration.
+
+		public function curveVertex( x, y, x2 = null, y2 = null ):void {
+		                                              ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(473): col: 17 Warning: variable 's' has no type declaration.
+
+				var b = [], s = 1 - curTightness;
+				            ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(506): col: 53 Warning: return value for function 'bezierVertex' has no type declaration.
+
+		public function bezierVertex(x, y, x2, y2, x3, y3 ) {
+		                                                  ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(517): col: 1 Warning: return value for function 'imageMode' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(527): col: 1 Warning: return value for function 'ortho' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(533): col: 8 Warning: variable 'newMatrix' has no type declaration.
+
+			var newMatrix = new Matrix();
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(541): col: 8 Warning: variable 'newMatrix' has no type declaration.
+
+			var newMatrix = new Matrix();
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(542): col: 23 Warning: Variables of type Number cannot be undefined. The value undefined will be type coerced to Number before comparison.
+
+			newMatrix.scale(x, y == undefined ? x : y);
+			                   ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(549): col: 8 Warning: variable 'newMatrix' has no type declaration.
+
+			var newMatrix = new Matrix();
+			    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(563): col: 1 Warning: return value for function 'pushMatrix' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(568): col: 1 Warning: return value for function 'popMatrix' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(573): col: 1 Warning: return value for function 'redraw' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(578): col: 1 Warning: return value for function 'beginDraw' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(587): col: 1 Warning: return value for function 'endDraw' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(591): col: 31 Warning: parameter 'img' has no type declaration.
+
+		public function background( img = null )
+		                            ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(592): col: 1 Warning: return value for function 'background' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(639): col: 1 Warning: return value for function 'noStroke' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(644): col: 1 Warning: return value for function 'noFill' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(737): col: 55 Warning: parameter 'y4' has no type declaration.
+
+		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                                    ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(738): col: 1 Warning: return value for function 'bezier' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(747): col: 49 Warning: parameter 'y3' has no type declaration.
+
+		public function triangle( x1, y1, x2, y2, x3, y3 )
+		                                              ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(748): col: 1 Warning: return value for function 'triangle' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(756): col: 53 Warning: parameter 'y4' has no type declaration.
+
+		public function quad( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                                  ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(757): col: 1 Warning: return value for function 'quad' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(767): col: 1 Warning: return value for function 'rect' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(795): col: 1 Warning: return value for function 'ellipse' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(836): col: 1 Warning: return value for function 'loop' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(842): col: 1 Warning: return value for function 'noLoop' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(847): col: 38 Warning: parameter 'target' has no type declaration.
+
+		public function link( href:String, target ):void
+		                                   ^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(855): col: 1 Warning: return value for function 'exit' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(862): col: 1 Warning: return value for function 'print' has no type declaration.
+
+		{
+^
+
+/root/my-documents/adobeFlex/processing.as-source-m1/processing/api/PGraphics.as(868): col: 1 Warning: return value for function 'println' has no type declaration.
+
+		{
+^
+
+mv: cannot stat `processing.swf': No such file or directory

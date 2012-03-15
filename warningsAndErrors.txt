@@ -1,0 +1,1412 @@
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(239): col: 33 Warning: parameter 'x' has no type declaration.
+
+		static private function Noise(x, y):Number
+		                              ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(239): col: 36 Warning: parameter 'y' has no type declaration.
+
+		static private function Noise(x, y):Number
+		                                 ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(243): col: 8 Warning: variable 'n' has no type declaration.
+
+			var n = x + y * 57;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(253): col: 41 Warning: parameter 'x' has no type declaration.
+
+		static private function SmoothedNoise(x, y):Number
+		                                      ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(253): col: 44 Warning: parameter 'y' has no type declaration.
+
+		static private function SmoothedNoise(x, y):Number
+		                                         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(257): col: 8 Warning: variable 'corners' has no type declaration.
+
+			var corners = ( Noise(x-1, y-1)+Noise(x+1, y-1)+Noise(x-1, y+1)+Noise(x+1, y+1) ) / 16;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(259): col: 8 Warning: variable 'sides' has no type declaration.
+
+			var sides	 = ( Noise(x-1, y)	+Noise(x+1, y)	+Noise(x, y-1)	+Noise(x, y+1) ) /	8;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(261): col: 8 Warning: variable 'center' has no type declaration.
+
+			var center	=	Noise(x, y) / 4;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(269): col: 45 Warning: parameter 'x' has no type declaration.
+
+		static private function InterpolatedNoise(x, y):Number
+		                                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(269): col: 48 Warning: parameter 'y' has no type declaration.
+
+		static private function InterpolatedNoise(x, y):Number
+		                                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(273): col: 8 Warning: variable 'integer_X' has no type declaration.
+
+			var integer_X		= Math.floor(x);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(275): col: 8 Warning: variable 'fractional_X' has no type declaration.
+
+			var fractional_X = x - integer_X;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(279): col: 8 Warning: variable 'integer_Y' has no type declaration.
+
+			var integer_Y		= Math.floor(y);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(281): col: 8 Warning: variable 'fractional_Y' has no type declaration.
+
+			var fractional_Y = y - integer_Y;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(285): col: 8 Warning: variable 'v1' has no type declaration.
+
+			var v1 = SmoothedNoise(integer_X,		 integer_Y);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(287): col: 8 Warning: variable 'v2' has no type declaration.
+
+			var v2 = SmoothedNoise(integer_X + 1, integer_Y);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(289): col: 8 Warning: variable 'v3' has no type declaration.
+
+			var v3 = SmoothedNoise(integer_X,		 integer_Y + 1);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(291): col: 8 Warning: variable 'v4' has no type declaration.
+
+			var v4 = SmoothedNoise(integer_X + 1, integer_Y + 1);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(295): col: 8 Warning: variable 'i1' has no type declaration.
+
+			var i1 = Interpolate(v1 , v2 , fractional_X);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(297): col: 8 Warning: variable 'i2' has no type declaration.
+
+			var i2 = Interpolate(v3 , v4 , fractional_X);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(307): col: 45 Warning: parameter 'y' has no type declaration.
+
+		static private function PerlinNoise_2D(x, y):Number
+		                                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(307): col: 42 Warning: parameter 'x' has no type declaration.
+
+		static private function PerlinNoise_2D(x, y):Number
+		                                       ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(311): col: 9 Warning: variable 'total' has no type declaration.
+
+				var total = 0;
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(313): col: 9 Warning: variable 'p' has no type declaration.
+
+				var p = 0.25;
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(315): col: 9 Warning: variable 'n' has no type declaration.
+
+				var n = 3;
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(319): col: 15 Warning: variable 'i' has no type declaration.
+
+				for ( var i = 0; i <= n; i++ )
+				          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(323): col: 11 Warning: variable 'frequency' has no type declaration.
+
+						var frequency = Math.pow(2, i);
+						    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(325): col: 11 Warning: variable 'amplitude' has no type declaration.
+
+						var amplitude = Math.pow(p, i);
+						    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(343): col: 41 Warning: parameter 'a' has no type declaration.
+
+	  static public function bezierTangent(a, b, c, d, t):Number {
+	                                       ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(343): col: 53 Warning: parameter 't' has no type declaration.
+
+	  static public function bezierTangent(a, b, c, d, t):Number {
+	                                                   ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(343): col: 44 Warning: parameter 'b' has no type declaration.
+
+	  static public function bezierTangent(a, b, c, d, t):Number {
+	                                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(343): col: 47 Warning: parameter 'c' has no type declaration.
+
+	  static public function bezierTangent(a, b, c, d, t):Number {
+	                                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(343): col: 50 Warning: parameter 'd' has no type declaration.
+
+	  static public function bezierTangent(a, b, c, d, t):Number {
+	                                                ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(352): col: 41 Warning: parameter 'b' has no type declaration.
+
+		static public function bezierPoint(a, b, c, d, t):Number
+		                                      ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(352): col: 50 Warning: parameter 't' has no type declaration.
+
+		static public function bezierPoint(a, b, c, d, t):Number
+		                                               ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(352): col: 38 Warning: parameter 'a' has no type declaration.
+
+		static public function bezierPoint(a, b, c, d, t):Number
+		                                   ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(352): col: 44 Warning: parameter 'c' has no type declaration.
+
+		static public function bezierPoint(a, b, c, d, t):Number
+		                                         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(352): col: 47 Warning: parameter 'd' has no type declaration.
+
+		static public function bezierPoint(a, b, c, d, t):Number
+		                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(354): col: 8 Warning: variable 'tm' has no type declaration.
+
+			var tm = 1 - t;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(355): col: 8 Warning: variable 't1' has no type declaration.
+
+			var t1 = a * Math.pow(tm,3);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(356): col: 8 Warning: variable 't2' has no type declaration.
+
+			var t2 = 3 * Math.pow(tm,2) * t * b;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(357): col: 8 Warning: variable 't3' has no type declaration.
+
+			var t3 = 3 * Math.pow(t , 2) * tm * c;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(358): col: 8 Warning: variable 't4' has no type declaration.
+
+			var t4 = Math.pow(t , 3) * d;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(359): col: 8 Warning: variable 'B' has no type declaration.
+
+			var B = t1 + t2 + t3 + t4;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(364): col: 39 Warning: parameter 'a' has no type declaration.
+
+		static private function Interpolate(a, b, x):Number
+		                                    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(364): col: 45 Warning: parameter 'x' has no type declaration.
+
+		static private function Interpolate(a, b, x):Number
+		                                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(364): col: 42 Warning: parameter 'b' has no type declaration.
+
+		static private function Interpolate(a, b, x):Number
+		                                       ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(368): col: 8 Warning: variable 'ft' has no type declaration.
+
+			var ft = x * Math.PI;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(370): col: 8 Warning: variable 'f' has no type declaration.
+
+			var f = (1 - Math.cos(ft)) * .5;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(378): col: 38 Warning: parameter 'aValue' has no type declaration.
+
+		static public function randomSeed( aValue )
+		                                   ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(380): col: 1 Warning: return value for function 'randomSeed' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(388): col: 34 Warning: parameter 'aMin' has no type declaration.
+
+		static public function random( aMin, aMax = null ):Number
+		                               ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PMath.as(388): col: 40 Warning: parameter 'aMax' has no type declaration.
+
+		static public function random( aMin, aMax = null ):Number
+		                                     ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(83): col: 22 Warning: variable 'functionNamesmyArray' has no type declaration.
+
+			public static var functionNamesmyArray = new Array(); // ddc
+			                  ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(89): col: 22 Warning: variable 'oldw' has no type declaration.
+
+			public static var oldw = 0;
+			                  ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(90): col: 22 Warning: variable 'oldh' has no type declaration.
+
+			public static var oldh = 0;
+			                  ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(96): col: 10 Warning: function 'goFullScreen' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+function goFullScreen(event:ContextMenuEvent):void
+         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(111): col: 6 Warning: variable 'screenScale' has no type declaration.
+
+	var screenScale = Capabilities.screenResolutionX / Capabilities.screenResolutionY;
+	    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(112): col: 6 Warning: variable 'scale' has no type declaration.
+
+	var scale = 0;
+	    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(130): col: 50 Warning: return value for function 'goScaledFullScreen' has no type declaration.
+
+function goScaledFullScreen(event:ContextMenuEvent){
+                                                 ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(130): col: 10 Warning: function 'goScaledFullScreen' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+function goScaledFullScreen(event:ContextMenuEvent){
+         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(137): col: 10 Warning: function 'exitFullScreen' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+function exitFullScreen(event:ContextMenuEvent):void
+         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(142): col: 10 Warning: function 'onFullScreen' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+function onFullScreen(fullScreenEvent:FullScreenEvent):void
+         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(144): col: 7 Warning: variable 'bFullScreen' has no type declaration.
+
+  var bFullScreen=fullScreenEvent.fullScreen;
+      ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(162): col: 10 Warning: function 'menuHandler' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+function menuHandler(event:ContextMenuEvent):void
+         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(228): col: 10 Warning: function 'startFullPictureUpload' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+function startFullPictureUpload():void {
+         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(229): col: 6 Warning: variable 'scale' has no type declaration.
+
+	var scale = 0;
+	    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(236): col: 5 Warning: variable 'smallerSide' has no type declaration.
+
+var smallerSide = Math.min(p.applet.width, p.applet.height);
+    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(306): col: 10 Warning: function 'startThumbnailUpload' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+function startThumbnailUpload():void {
+         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(311): col: 6 Warning: variable 'scale' has no type declaration.
+
+	var scale = 0;
+	    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(396): col: 31 Warning: parameter 'dir' has no type declaration.
+
+		function callFromJavaScript(dir):void {	
+		                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(396): col: 12 Warning: function 'callFromJavaScript' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+		function callFromJavaScript(dir):void {	
+		         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(557): col: 12 Warning: function 'addPlayButton' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+		function addPlayButton() {
+		         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(557): col: 26 Warning: return value for function 'addPlayButton' has no type declaration.
+
+		function addPlayButton() {
+		                       ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(558): col: 10 Warning: variable 'buttonAttachX' has no type declaration.
+
+					var buttonAttachX = 20;
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(559): col: 10 Warning: variable 'buttonAttachY' has no type declaration.
+
+					var buttonAttachY = 20;
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(560): col: 10 Warning: variable 'buttonSquareSide' has no type declaration.
+
+					var buttonSquareSide = 55;
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(585): col: 10 Warning: variable 'arrowOffsetX' has no type declaration.
+
+					var arrowOffsetX = 20;
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(586): col: 10 Warning: variable 'arrowOffsetY' has no type declaration.
+
+					var arrowOffsetY = 10;
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(612): col: 12 Warning: function 'clickedPlayButton' will be scoped to the default namespace: processing: internal.  It will not be visible outside of this package.
+
+		function clickedPlayButton(event:MouseEvent){
+		         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as(612): col: 45 Warning: return value for function 'clickedPlayButton' has no type declaration.
+
+		function clickedPlayButton(event:MouseEvent){
+		                                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/TokenType.as(63): col: 62 Warning: null used where a int value was expected.
+
+		public static const CALL:TokenType = new TokenType('CALL', null, 2);
+		                                                           ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/TokenType.as(64): col: 80 Warning: null used where a int value was expected.
+
+		public static const NEW_WITH_ARGS:TokenType = new TokenType('NEW_WITH_ARGS', null, 2);
+		                                                                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/TokenType.as(66): col: 74 Warning: null used where a int value was expected.
+
+		public static const ARRAY_INIT:TokenType = new TokenType('ARRAY_INIT', null, 1);
+		                                                                       ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/TokenType.as(67): col: 76 Warning: null used where a int value was expected.
+
+		public static const OBJECT_INIT:TokenType = new TokenType('OBJECT_INIT', null, 1);
+		                                                                         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/TokenType.as(69): col: 64 Warning: null used where a int value was expected.
+
+		public static const GROUP:TokenType = new TokenType('GROUP', null, 1);
+		                                                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Token.as(24): col: 25 Warning: return value for function 'debug' has no type declaration.
+
+		public function debug() {
+		                      ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Tokenizer.as(16): col: 48 Warning: return value for function 'load' has no type declaration.
+
+		public function load(s:String = '', l:int = 1) {
+		                                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Tokenizer.as(30): col: 10 Warning: variable 'input' has no type declaration.
+
+					var input = source.substring(peekCursor);
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Tokenizer.as(31): col: 10 Warning: variable 'match' has no type declaration.
+
+					var match = (onSameLine ? /^[ \t]+/ : /^\s+/)(input);
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Tokenizer.as(33): col: 11 Warning: variable 'spaces' has no type declaration.
+
+						var spaces = match[0];
+						    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Tokenizer.as(43): col: 10 Warning: variable 'comment' has no type declaration.
+
+					var comment = match[0];
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Tokenizer.as(153): col: 36 Warning: return value for function 'currentToken' has no type declaration.
+
+		public function get currentToken() { return _currentToken; }
+		                                 ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/ExecutionContext.as(41): col: 13 Warning: variable 'key' has no type declaration.
+
+			for (var key in scope){
+			         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/FunctionDefinition.as(35): col: 3 Warning: return value for function 'anonymous' has no type declaration.
+
+				{
+		^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/FunctionDefinition.as(74): col: 2 Warning: return value for function 'anonymous' has no type declaration.
+
+			{
+	^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/FunctionDefinition.as(93): col: 14 Warning: variable 'i' has no type declaration.
+
+				for (var i in args)
+				         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/Block.as(15): col: 1 Warning: return value for function 'append' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/Block.as(23): col: 1 Warning: return value for function 'execute' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(53): col: 48 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+			if (processing.DEBUG_FOR_OO) debugTextField.text += "\r defining class " +identifier;
+			                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(55): col: 48 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+			if (processing.DEBUG_FOR_OO) debugTextField.text += " which extends class "+extendedClassName;
+			                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(62): col: 49 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+				if (processing.DEBUG_FOR_OO) debugTextField.text += "\r context where the "+ identifier +" constructor is being attached: ";
+				                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(66): col: 2 Warning: return value for function 'anonymous' has no type declaration.
+
+			{
+	^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(68): col: 49 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+				if (processing.DEBUG_FOR_OO) debugTextField.text += "\r constructing class " +identifier;
+				                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(69): col: 49 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+				if (processing.DEBUG_FOR_OO) debugTextField.text += "\r context at start: ";
+				                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(75): col: 50 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+					if (processing.DEBUG_FOR_OO) debugTextField.text += "\r ... without running constructors ";
+					                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(78): col: 50 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+					if (processing.DEBUG_FOR_OO) debugTextField.text += "\r ... also running constructors ";
+					                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(127): col: 50 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+					if (processing.DEBUG_FOR_OO) debugTextField.text += "\r class " +identifier +" talking: invoking constructor ";
+					                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(128): col: 50 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+					if (processing.DEBUG_FOR_OO) debugTextField.text += "\r classContext debug: ";
+					                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(130): col: 50 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+					if (processing.DEBUG_FOR_OO) debugTextField.text += "\r classContext scope identifier: " + classContext.scope[identifier];
+					                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(131): col: 50 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+					if (processing.DEBUG_FOR_OO) debugTextField.text += "\r number of arguments: " + args.length;
+					                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(133): col: 50 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+					if (processing.DEBUG_FOR_OO) debugTextField.text += "\r class " +identifier +" talking: constructor finished ";
+					                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(142): col: 49 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+				if (processing.DEBUG_FOR_OO) debugTextField.text += "\r context after "+ identifier +" constructor has been attached: ";
+				                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(158): col: 48 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+			if (processing.DEBUG_FOR_OO) debugTextField.text += "\r recursive execute from class " +identifier;
+			                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(160): col: 49 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+				if (processing.DEBUG_FOR_OO) debugTextField.text += "\r recursively invoking executes of class " +extendedClassName;
+				                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(165): col: 48 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+			if (processing.DEBUG_FOR_OO) debugTextField.text += "\r class "+identifier+" talking: actually doing the invokations.";
+			                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(202): col: 50 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+					if (processing.DEBUG_FOR_OO) debugTextField.text += "\r there is no constructor body in class "+identifier;
+					                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(206): col: 48 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+			if (processing.DEBUG_FOR_OO) debugTextField.text += "\r showing the obj context after the invokations";
+			                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(208): col: 48 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+			if (processing.DEBUG_FOR_OO) debugTextField.text += "\r showing the subcontext after the invokations";
+			                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ClassDefinition.as(210): col: 48 Warning: Appending text to a TextField using += is many times slower than using the TextField.appendText() method.
+
+			if (processing.DEBUG_FOR_OO) debugTextField.text += "\r class "+identifier+" talking: done with my bit of the recursive invokations.";
+			                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ThisReference.as(20): col: 20 Warning: Empty statement found where block of code expected. Did you type ';' accidentally?
+
+			    c = c.parent);
+			                ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/Call.as(27): col: 8 Warning: variable 'returnValue' has no type declaration.
+
+			var returnValue;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/Reference.as(44): col: 21 Warning: Empty statement found where block of code expected. Did you type ';' accidentally?
+
+				    c = c.parent);
+				                ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/Reference.as(47): col: 9 Warning: Duplicate variable definition.
+
+				var base:Object = c.scope;
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/Operation.as(52): col: 45 Warning: The instanceof operator is deprecated, use the is operator instead.
+
+			    case TokenType.INSTANCEOF:		return a instanceof b;
+			                              		         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/statements/ObjectInstantiation.as(42): col: 30 Warning: return value for function 'Function' has no type declaration.
+
+				return function Function() {};
+				                         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/AudioPlayer.as(14): col: 1 Warning: return value for function 'play' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/AudioPlayer.as(20): col: 1 Warning: return value for function 'pause' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/Minim.as(23): col: 8 Warning: variable 'lastPiece' has no type declaration.
+
+			var lastPiece = theFileOrURL.substring(theFileOrURL.length-9,theFileOrURL.length);
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/Minim.as(26): col: 9 Warning: variable 'firstPiece' has no type declaration.
+
+				var firstPiece = theFileOrURL.substring(0,theFileOrURL.length-9);
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(14): col: 14 Warning: variable 'i' has no type declaration.
+
+			for ( var i = 0; i < size1; i++ )
+			          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(22): col: 16 Warning: variable 'j' has no type declaration.
+
+					for ( var j = 0; j < size2; j++ )
+					          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(30): col: 18 Warning: variable 'k' has no type declaration.
+
+							for ( var k = 0; k < size3; k++ )
+							          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(45): col: 24 Warning: parameter 'i' has no type declaration.
+
+		public function get( i ):*
+		                     ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(50): col: 27 Warning: parameter 'i' has no type declaration.
+
+		public function remove( i ):*
+		                        ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(55): col: 24 Warning: parameter 'item' has no type declaration.
+
+		public function add( item ):void
+		                     ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(57): col: 49 Warning: Empty statement found where block of code expected. Did you type ';' accidentally?
+
+			for ( var i = 0; this[ i ] != undefined; i++ );
+			                                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(57): col: 14 Warning: variable 'i' has no type declaration.
+
+			for ( var i = 0; this[ i ] != undefined; i++ );
+			          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(63): col: 8 Warning: variable 'a' has no type declaration.
+
+			var a = new ArrayList( this.length );
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/ArrayList.as(64): col: 14 Warning: variable 'i' has no type declaration.
+
+			for ( var i = 0; i < this.length; i++ )
+			          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PImage.as(57): col: 25 Warning: parameter 'file' has no type declaration.
+
+		public function save( file )
+		                      ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PImage.as(58): col: 1 Warning: return value for function 'save' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PImage.as(63): col: 32 Warning: return value for function 'mask' has no type declaration.
+
+		public function mask(m:PImage) {
+		                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PImage.as(66): col: 30 Warning: return value for function 'loadPixels' has no type declaration.
+
+		public function loadPixels() {
+		                           ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PImage.as(77): col: 32 Warning: return value for function 'updatePixels' has no type declaration.
+
+		public function updatePixels() {
+		                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(28): col: 8 Warning: variable 'firstSuper' has no type declaration.
+
+			var firstSuper;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(29): col: 8 Warning: variable 'lasteExtendsBeforeFirstSuper' has no type declaration.
+
+			var lasteExtendsBeforeFirstSuper;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(30): col: 8 Warning: variable 'classStartBracket' has no type declaration.
+
+			var classStartBracket;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(31): col: 8 Warning: variable 'findingTheExtendedClass' has no type declaration.
+
+			var findingTheExtendedClass;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(32): col: 8 Warning: variable 'extendingClassName' has no type declaration.
+
+			var extendingClassName;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(33): col: 8 Warning: variable 'lasteClassBeforeFirstSuper' has no type declaration.
+
+			var lasteClassBeforeFirstSuper;
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(97): col: 10 Warning: Duplicate variable definition.
+
+					var thenBlock:Block = parseStatement();
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(104): col: 11 Warning: Duplicate variable definition.
+
+						var elseBlock:Block = parseStatement();
+						    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(118): col: 9 Warning: Duplicate variable definition.
+
+				var condition:IExecutable = parseExpression(TokenType.RIGHT_PAREN);
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(125): col: 10 Warning: Duplicate variable definition.
+
+					var body:Block = parseStatement();
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(171): col: 9 Warning: Duplicate variable definition.
+
+				var condition:IExecutable = parseExpression(TokenType.SEMICOLON);
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(178): col: 10 Warning: Duplicate variable definition.
+
+					var body:Block = parseBlock(TokenType.RIGHT_CURLY);
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(181): col: 10 Warning: Duplicate variable definition.
+
+					var body:Block = parseStatement();
+					    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(602): col: 9 Warning: Duplicate variable definition.
+
+				var isArray:Boolean = tokenizer.peek(2).match(TokenType.ARRAY_DIMENSION);
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/parser/Parser.as(630): col: 21 Warning: Duplicate variable definition.
+
+						for each (var i:* in tmpOperands)
+						              ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PApplet.as(122): col: 1 Warning: return value for function 'onMouseMove' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PApplet.as(139): col: 1 Warning: return value for function 'onMouseDown' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PApplet.as(154): col: 1 Warning: return value for function 'onMouseUp' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PApplet.as(171): col: 1 Warning: return value for function 'onKeyDown' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PApplet.as(192): col: 1 Warning: return value for function 'onKeyUp' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PApplet.as(209): col: 1 Warning: return value for function 'onEnterFrame' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(33): col: 16 Warning: variable 'PI' has no type declaration.
+
+		public const PI = Math.PI;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(34): col: 16 Warning: variable 'TWO_PI' has no type declaration.
+
+		public const TWO_PI = 2 * Math.PI;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(35): col: 16 Warning: variable 'HALF_PI' has no type declaration.
+
+		public const HALF_PI = Math.PI / 2;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(36): col: 16 Warning: variable 'P2D' has no type declaration.
+
+		public const P2D = 2;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(37): col: 16 Warning: variable 'P3D' has no type declaration.
+
+		public const P3D = 3;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(38): col: 16 Warning: variable 'CORNER' has no type declaration.
+
+		public const CORNER = 0;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(39): col: 16 Warning: variable 'RADIUS' has no type declaration.
+
+		public const RADIUS = 1;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(40): col: 16 Warning: variable 'CENTER_RADIUS' has no type declaration.
+
+		public const CENTER_RADIUS = 1;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(41): col: 16 Warning: variable 'CENTER' has no type declaration.
+
+		public const CENTER = 2;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(42): col: 16 Warning: variable 'POLYGON' has no type declaration.
+
+		public const POLYGON = 2;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(43): col: 16 Warning: variable 'QUADS' has no type declaration.
+
+		public const QUADS = 5;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(44): col: 16 Warning: variable 'TRIANGLES' has no type declaration.
+
+		public const TRIANGLES = 6;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(45): col: 16 Warning: variable 'POINTS' has no type declaration.
+
+		public const POINTS = 7;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(46): col: 16 Warning: variable 'LINES' has no type declaration.
+
+		public const LINES = 8;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(47): col: 16 Warning: variable 'TRIANGLE_STRIP' has no type declaration.
+
+		public const TRIANGLE_STRIP = 9;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(48): col: 16 Warning: variable 'TRIANGLE_FAN' has no type declaration.
+
+		public const TRIANGLE_FAN = 4;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(49): col: 16 Warning: variable 'QUAD_STRIP' has no type declaration.
+
+		public const QUAD_STRIP = 3;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(50): col: 16 Warning: variable 'CORNERS' has no type declaration.
+
+		public const CORNERS = 10;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(51): col: 16 Warning: variable 'CLOSE' has no type declaration.
+
+		public const CLOSE = true;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(52): col: 16 Warning: variable 'RGB' has no type declaration.
+
+		public const RGB = 1;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(53): col: 16 Warning: variable 'HSB' has no type declaration.
+
+		public const HSB = 2;
+		             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(76): col: 15 Warning: variable 'getLoaded' has no type declaration.
+
+		private var getLoaded;
+		            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(182): col: 9 Warning: variable 'a' has no type declaration.
+
+				var a = getColor(args[3], opacityRange);
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(185): col: 9 Warning: variable 'r' has no type declaration.
+
+				var r = getColor(args[0], redRange);
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(186): col: 9 Warning: variable 'g' has no type declaration.
+
+				var g = getColor(args[1], greenRange);
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(187): col: 9 Warning: variable 'b' has no type declaration.
+
+				var b = getColor(args[2], blueRange);
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(190): col: 9 Warning: variable 'colors' has no type declaration.
+
+				var colors = (curColorMode == HSB) ?
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(211): col: 44 Warning: parameter 'brightness' has no type declaration.
+
+		private function HSBtoRGB(hue,saturation,brightness):Array {
+		                                         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(211): col: 33 Warning: parameter 'saturation' has no type declaration.
+
+		private function HSBtoRGB(hue,saturation,brightness):Array {
+		                              ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(211): col: 29 Warning: parameter 'hue' has no type declaration.
+
+		private function HSBtoRGB(hue,saturation,brightness):Array {
+		                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(213): col: 19 Warning: variable 'blue' has no type declaration.
+
+		var red, green, blue
+		                ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(213): col: 7 Warning: variable 'red' has no type declaration.
+
+		var red, green, blue
+		    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(213): col: 12 Warning: variable 'green' has no type declaration.
+
+		var red, green, blue
+		         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(222): col: 7 Warning: variable 'i' has no type declaration.
+
+		var i = Math.floor(hue);
+		    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(223): col: 7 Warning: variable 'f' has no type declaration.
+
+		var f = hue-i;
+		    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(224): col: 7 Warning: variable 'p' has no type declaration.
+
+		var p = brightness*(1-saturation);
+		    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(225): col: 7 Warning: variable 'q' has no type declaration.
+
+		var q = brightness*(1-(saturation*f));
+		    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(226): col: 7 Warning: variable 't' has no type declaration.
+
+		var t = brightness*(1-(saturation*(1-f)));
+		    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(266): col: 38 Warning: parameter 'range' has no type declaration.
+
+		private function getColor( aValue, range ):Number {
+		                                   ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(266): col: 30 Warning: parameter 'aValue' has no type declaration.
+
+		private function getColor( aValue, range ):Number {
+		                           ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(270): col: 46 Warning: parameter 'mode' has no type declaration.
+
+		public function createImage( w:int, h:int, mode = null ):PImage
+		                                           ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(291): col: 30 Warning: parameter 'img' has no type declaration.
+
+		private function getImage( img ) {
+		                           ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(291): col: 34 Warning: return value for function 'getImage' has no type declaration.
+
+		private function getImage( img ) {
+		                               ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(321): col: 1 Warning: return value for function 'image' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(431): col: 31 Warning: parameter 'type' has no type declaration.
+
+		public function beginShape( type = POLYGON )
+		                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(432): col: 1 Warning: return value for function 'beginShape' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(439): col: 29 Warning: parameter 'close' has no type declaration.
+
+		public function endShape( close = true )
+		                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(440): col: 1 Warning: return value for function 'endShape' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(451): col: 66 Warning: parameter 'y3' has no type declaration.
+
+		public function vertex( x, y, x2 = null, y2 = null, x3 = null, y3 = null )
+		                                                               ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(451): col: 44 Warning: parameter 'y2' has no type declaration.
+
+		public function vertex( x, y, x2 = null, y2 = null, x3 = null, y3 = null )
+		                                         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(451): col: 27 Warning: parameter 'x' has no type declaration.
+
+		public function vertex( x, y, x2 = null, y2 = null, x3 = null, y3 = null )
+		                        ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(451): col: 55 Warning: parameter 'x3' has no type declaration.
+
+		public function vertex( x, y, x2 = null, y2 = null, x3 = null, y3 = null )
+		                                                    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(451): col: 30 Warning: parameter 'y' has no type declaration.
+
+		public function vertex( x, y, x2 = null, y2 = null, x3 = null, y3 = null )
+		                           ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(451): col: 33 Warning: parameter 'x2' has no type declaration.
+
+		public function vertex( x, y, x2 = null, y2 = null, x3 = null, y3 = null )
+		                              ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(452): col: 1 Warning: return value for function 'vertex' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(550): col: 38 Warning: parameter 'x2' has no type declaration.
+
+		public function curveVertex( x, y, x2 = null, y2 = null ):void {
+		                                   ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(550): col: 35 Warning: parameter 'y' has no type declaration.
+
+		public function curveVertex( x, y, x2 = null, y2 = null ):void {
+		                                ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(550): col: 32 Warning: parameter 'x' has no type declaration.
+
+		public function curveVertex( x, y, x2 = null, y2 = null ):void {
+		                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(550): col: 49 Warning: parameter 'y2' has no type declaration.
+
+		public function curveVertex( x, y, x2 = null, y2 = null ):void {
+		                                              ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(554): col: 9 Warning: variable 'b' has no type declaration.
+
+				var b = [], s = 1 - curTightness;
+				    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(554): col: 17 Warning: variable 's' has no type declaration.
+
+				var b = [], s = 1 - curTightness;
+				            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(587): col: 42 Warning: parameter 'y2' has no type declaration.
+
+		public function bezierVertex(x, y, x2, y2, x3, y3 ) {
+		                                       ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(587): col: 38 Warning: parameter 'x2' has no type declaration.
+
+		public function bezierVertex(x, y, x2, y2, x3, y3 ) {
+		                                   ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(587): col: 32 Warning: parameter 'x' has no type declaration.
+
+		public function bezierVertex(x, y, x2, y2, x3, y3 ) {
+		                             ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(587): col: 53 Warning: return value for function 'bezierVertex' has no type declaration.
+
+		public function bezierVertex(x, y, x2, y2, x3, y3 ) {
+		                                                  ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(587): col: 35 Warning: parameter 'y' has no type declaration.
+
+		public function bezierVertex(x, y, x2, y2, x3, y3 ) {
+		                                ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(587): col: 46 Warning: parameter 'x3' has no type declaration.
+
+		public function bezierVertex(x, y, x2, y2, x3, y3 ) {
+		                                           ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(587): col: 50 Warning: parameter 'y3' has no type declaration.
+
+		public function bezierVertex(x, y, x2, y2, x3, y3 ) {
+		                                               ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(598): col: 1 Warning: return value for function 'imageMode' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(608): col: 1 Warning: return value for function 'ortho' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(614): col: 8 Warning: variable 'newMatrix' has no type declaration.
+
+			var newMatrix = new Matrix();
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(631): col: 8 Warning: variable 'newMatrix' has no type declaration.
+
+			var newMatrix = new Matrix();
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(642): col: 8 Warning: variable 'newMatrix' has no type declaration.
+
+			var newMatrix = new Matrix();
+			    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(660): col: 1 Warning: return value for function 'pushMatrix' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(671): col: 1 Warning: return value for function 'popMatrix' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(682): col: 1 Warning: return value for function 'redraw' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(687): col: 1 Warning: return value for function 'beginDraw' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(697): col: 1 Warning: return value for function 'endDraw' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(701): col: 31 Warning: parameter 'img' has no type declaration.
+
+		public function background( img = null )
+		                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(702): col: 1 Warning: return value for function 'background' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(749): col: 1 Warning: return value for function 'noStroke' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(754): col: 1 Warning: return value for function 'noFill' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(939): col: 13 Warning: Duplicate variable definition.
+
+			for (var i:int = 0; i < segs; i++)
+			         ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(970): col: 51 Warning: parameter 'x4' has no type declaration.
+
+		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                                ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(970): col: 27 Warning: parameter 'x1' has no type declaration.
+
+		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                        ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(970): col: 35 Warning: parameter 'x2' has no type declaration.
+
+		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(970): col: 55 Warning: parameter 'y4' has no type declaration.
+
+		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                                    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(970): col: 47 Warning: parameter 'y3' has no type declaration.
+
+		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(970): col: 39 Warning: parameter 'y2' has no type declaration.
+
+		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                    ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(970): col: 43 Warning: parameter 'x3' has no type declaration.
+
+		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                        ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(970): col: 31 Warning: parameter 'y1' has no type declaration.
+
+		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                            ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(971): col: 1 Warning: return value for function 'bezier' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(980): col: 45 Warning: parameter 'x3' has no type declaration.
+
+		public function triangle( x1, y1, x2, y2, x3, y3 )
+		                                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(980): col: 37 Warning: parameter 'x2' has no type declaration.
+
+		public function triangle( x1, y1, x2, y2, x3, y3 )
+		                                  ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(980): col: 33 Warning: parameter 'y1' has no type declaration.
+
+		public function triangle( x1, y1, x2, y2, x3, y3 )
+		                              ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(980): col: 41 Warning: parameter 'y2' has no type declaration.
+
+		public function triangle( x1, y1, x2, y2, x3, y3 )
+		                                      ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(980): col: 29 Warning: parameter 'x1' has no type declaration.
+
+		public function triangle( x1, y1, x2, y2, x3, y3 )
+		                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(980): col: 49 Warning: parameter 'y3' has no type declaration.
+
+		public function triangle( x1, y1, x2, y2, x3, y3 )
+		                                              ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(981): col: 1 Warning: return value for function 'triangle' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(989): col: 25 Warning: parameter 'x1' has no type declaration.
+
+		public function quad( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                      ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(989): col: 37 Warning: parameter 'y2' has no type declaration.
+
+		public function quad( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                  ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(989): col: 41 Warning: parameter 'x3' has no type declaration.
+
+		public function quad( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                      ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(989): col: 49 Warning: parameter 'x4' has no type declaration.
+
+		public function quad( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                              ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(989): col: 33 Warning: parameter 'x2' has no type declaration.
+
+		public function quad( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                              ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(989): col: 45 Warning: parameter 'y3' has no type declaration.
+
+		public function quad( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(989): col: 53 Warning: parameter 'y4' has no type declaration.
+
+		public function quad( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                                                  ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(989): col: 29 Warning: parameter 'y1' has no type declaration.
+
+		public function quad( x1, y1, x2, y2, x3, y3, x4, y4 )
+		                          ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(990): col: 1 Warning: return value for function 'quad' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(1000): col: 1 Warning: return value for function 'rect' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(1031): col: 1 Warning: return value for function 'ellipse' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(1080): col: 1 Warning: return value for function 'loop' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(1086): col: 1 Warning: return value for function 'noLoop' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(1091): col: 38 Warning: parameter 'target' has no type declaration.
+
+		public function link( href:String, target ):void
+		                                   ^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(1099): col: 1 Warning: return value for function 'exit' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(1112): col: 1 Warning: return value for function 'print' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing/api/PGraphics.as(1123): col: 1 Warning: return value for function 'println' has no type declaration.
+
+		{
+^
+
+/Users/davidedellacasa/Documents/sPStuff/sketchpatchsources/processing.as-source-m1/processing.as: Warning: This compilation unit did not have a factoryClass specified in Frame metadata to load the configured runtime shared libraries. To compile without runtime shared libraries either set the -static-link-runtime-shared-libraries option to true or remove the -runtime-shared-libraries option.
+
