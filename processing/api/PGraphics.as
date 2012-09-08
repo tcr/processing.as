@@ -49,8 +49,15 @@ package processing.api {
 		public const QUAD_STRIP = 3;
 		public const CORNERS = 10;
 		public const CLOSE = true;
+		
+		// colorspace types:
 		public const RGB = 1;
-		public const HSB = 2;
+		public const HSB = 3;
+
+		// stroke cap types:
+		public const SQUARE = 1;
+		public const PROJECT = 4;
+		public const ROUND = 2;
 
 		// private state variables
 		private var hasBackground:Boolean = false;
@@ -79,9 +86,8 @@ package processing.api {
 		private var doStroke:Boolean = true;
 		private var curStrokeWeight:Number = 1;
 		private var curStrokeColor:Number = 0xFF000000;
-		//private var curStrokeCap:String = CapsStyle.ROUND;
-		//private var curStrokeCap:String = CapsStyle.NONE;
-		private var curStrokeCap:String = CapsStyle.SQUARE;
+		private var curStrokeCap:String = CapsStyle.ROUND;
+		private var curStrokeJoint:String = null;
 
 		// fill
 		private var doFill:Boolean = true;
@@ -132,26 +138,34 @@ package processing.api {
 			}
 		}
 
-		private function beginShapeDrawing():void {			
+		private function setStroke():void {
 			// set stroke
-			if (doStroke)
+			if (doStroke) {
 				shape.graphics.lineStyle(curStrokeWeight * 1.05 , curStrokeColor & 0xFFFFFF,
 				    alpha(curStrokeColor) / 255, true, 'normal',
-				    curStrokeCap, JointStyle.MITER);
-			else
+				    curStrokeCap);
+			}
+			else {
 				shape.graphics.lineStyle();
-
-			// set fill
-			if (doFill)
-				shape.graphics.beginFill(curFillColor & 0xFFFFFF, alpha(curFillColor) / 255);
+			}
 		}
 
-		private function endShapeDrawing():void {
-			// end any open fill
-			shape.graphics.endFill();
+		private function startTheFill():void {
+			// set fill
+			if (doFill) {
+				shape.graphics.beginFill(curFillColor & 0xFFFFFF, alpha(curFillColor) / 255);
+			}
+		}
 
+		private function endTheFill():void {
+			// end any open fill
+			if (doFill)
+				shape.graphics.endFill();
+		}
+		
+		private function rasteriseShape():void {
 			// rasterize and clear shape
-//[TODO] this is here because of shapeMatrix... fix that later?
+			//[TODO] this is here because of shapeMatrix... fix that later?
 			bitmapData.draw(shape, shapeMatrix, null, null, null, doSmooth);
 			shape.graphics.clear();
 		}
@@ -442,7 +456,8 @@ package processing.api {
 				shape.graphics.lineTo( firstX, firstY );
 			
 			if ( curShapeCount != 0  || pathOpen ) {
-				endShapeDrawing();
+				endTheFill();
+				rasteriseShape();
 				curShapeCount = 0;
 				pathOpen = false;
 			}
@@ -453,7 +468,8 @@ package processing.api {
 			if ( curShapeCount == 0 && curShape != POINTS )
 			{
 				pathOpen = true;
-				beginShapeDrawing();
+				setStroke();
+				startTheFill();
 				shape.graphics.moveTo( x, y );
 				firstX = x;
 				firstY = y;
@@ -474,7 +490,8 @@ package processing.api {
 							// finish shape
 							endShape(CLOSE);
 							pathOpen = true;
-							beginShapeDrawing();
+							setStroke();
+							startTheFill();
 							
 							// redraw last line to start next shape
 							shape.graphics.moveTo( prevX, prevY );
@@ -489,7 +506,8 @@ package processing.api {
 						// finish shape
 						endShape(CLOSE);
 						pathOpen = true;
-						beginShapeDrawing();
+						setStroke();
+						startTheFill();
 				
 						// redraw last line to start next shape
 						shape.graphics.moveTo( firstX, firstY );
@@ -502,7 +520,8 @@ package processing.api {
 						shape.graphics.lineTo( prevX, prevY );
 						endShape(CLOSE);
 						pathOpen = true;
-						beginShapeDrawing();
+						setStroke();
+						startTheFill();
 			
 						// redraw lines to start next shape
 						shape.graphics.moveTo( prevX, prevY );
@@ -789,6 +808,34 @@ package processing.api {
 			//if (w ==0) return;
 			curStrokeWeight = w;
 		}
+
+		// For strokeCap docs, see:
+		// 	http://processing.org/reference/strokeCap_.html
+		//	http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Graphics.html#lineStyle()
+		// to test this:
+		// strokeWeight(12.0);
+		// strokeCap(ROUND);
+		// line(20, 30, 80, 30);
+		// strokeCap(SQUARE);
+		// line(20, 50, 80, 50);
+		// strokeCap(PROJECT);
+		// line(20, 70, 80, 70);
+		
+		public function strokeCap( w:Number ):void
+		{
+			if (w == SQUARE){
+				curStrokeCap = CapsStyle.NONE;
+				//curStrokeJoint = JointStyle.BEVEL;
+			}
+			else if (w == PROJECT){
+				curStrokeCap = CapsStyle.SQUARE;
+				//curStrokeJoint = JointStyle.MITER;				
+			}
+			else if (w == ROUND){
+				curStrokeCap = CapsStyle.ROUND;
+				//curStrokeJoint = JointStyle.ROUND;
+			}
+		}
 		
 		public function point( x:Number, y:Number ):void
 		{
@@ -805,16 +852,12 @@ package processing.api {
 		pointPosition = shapeMatrix.transformPoint(point);
 		
 
-        // ok now we draw the rectangle of 1px by 1px.
-        // Note that the rectangle now should be in the right place and the right size
-        // but should not be rotated
-
 		// let's draw no stroke, the point is made entirely form the fill
-        				shape.graphics.lineStyle();
+        shape.graphics.lineStyle();
 
 		// we draw the fill of the rectangle, but the color is the one we degined with
 		// the stroke primitive, so we look at curStrokeColor instead of curFillColor
-				shape.graphics.beginFill(curStrokeColor & 0xFFFFFF, alpha(curStrokeColor) == 255 ? 255 : alpha(curStrokeColor) / 312);
+		shape.graphics.beginFill(curStrokeColor & 0xFFFFFF, alpha(curStrokeColor) == 255 ? 255 : alpha(curStrokeColor) / 312);
 
         //pointPosition.x -= (1 / 2);
 		//pointPosition.y -= (1 / 2);
@@ -827,18 +870,6 @@ package processing.api {
 //[TODO] this is here because of shapeMatrix... fix that later?
 			bitmapData.draw(shape, null, null, null, null, doSmooth);
 			shape.graphics.clear();
-
-
-		
-		// then, draw it as a rectangle of the appropriate scale (the trick here is that we don't have
-		// to rotate the rectangle)
-		
-		/*
-		if (curStrokeColor & 0xFF000000){
-			bitmapData.setPixel32(x, y, curStrokeColor);		
-		}
-		curStrokeColor = curStrokeColor | 0x09000000;
-		*/
 
 		}
 
@@ -900,7 +931,8 @@ if (height < 0 || width < 0) return;
 			}
 			
 			// start drawing from center
-			beginShapeDrawing();
+			setStroke();
+			startTheFill();
 			//shape.graphics.moveTo(ax, ay);
 			shape.graphics.moveTo(x, y);
 			shape.graphics.lineTo(ax, ay);
@@ -920,7 +952,8 @@ if (height < 0 || width < 0) return;
 			// end shape
 			shape.graphics.lineTo(x, y);
 			//shape.graphics.moveTo(x, y);
-			endShapeDrawing();
+				endTheFill();
+				rasteriseShape();
 			}
 
 			// Now - if there is a stroke to show, we have to draw the edge of the curve again
@@ -928,7 +961,7 @@ if (height < 0 || width < 0) return;
 
 			if (doStroke || thereWasAStrokeToMake){
 			doStroke = true;
-			shape.graphics.lineStyle(curStrokeWeight, curStrokeColor & 0xFFFFFF, alpha(curStrokeColor) / 255, true, 'normal', curStrokeCap, curStrokeCap);
+			shape.graphics.lineStyle(curStrokeWeight, curStrokeColor & 0xFFFFFF, alpha(curStrokeColor) / 255, true, 'normal', curStrokeCap);
 			
 			angle = -(start + Math.PI/2);
 			//beginShapeDrawing();
@@ -961,20 +994,20 @@ if (height < 0 || width < 0) return;
 		
 		public function line( x1:Number = 0, y1:Number = 0, x2:Number = 0, y2:Number = 0):void
 		{
-			beginShapeDrawing();
+			setStroke();
 			shape.graphics.moveTo( x1, y1 );
 			shape.graphics.lineTo( x2, y2 );
-			endShapeDrawing();
+				rasteriseShape();
 		}
 	
 		public function bezier( x1, y1, x2, y2, x3, y3, x4, y4 )
 		{
 //			curContext.lineCap = "butt";
-			beginShapeDrawing();
+			setStroke();
                         shape.graphics.moveTo(x1, y1);
                         (new Bezier(shape.graphics)).drawCubicBezier(
 			    new Point(x1, y1), new Point(x2, y2), new Point(x3, y3), new Point(x4, y4), 4);
-			endShapeDrawing();
+				rasteriseShape();
                 }
 	
 		public function triangle( x1, y1, x2, y2, x3, y3 )
@@ -1022,9 +1055,11 @@ if (height < 0 || width < 0) return;
 			}
 
 			// draw shape
-			beginShapeDrawing();
+			setStroke();
+			startTheFill();
 			shape.graphics.drawRect(x, y, width, height);
-			endShapeDrawing();
+				endTheFill();
+				rasteriseShape();
 		}
 		
 		public function ellipse( x:Number, y:Number, width:Number, height:Number )
@@ -1042,9 +1077,11 @@ if (height < 0 || width < 0) return;
 			}
 
 			// draw shape
-			beginShapeDrawing();
+			setStroke();
+			startTheFill();
 			shape.graphics.drawEllipse(x, y, width, height);
-			endShapeDrawing();
+				endTheFill();
+				rasteriseShape();
 		}
 
 		//=========================================================
