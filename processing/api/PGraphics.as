@@ -884,7 +884,7 @@ if (height < 0 || width < 0) return;
 			start = - start + 3/2*Math.PI;
 			stop = - stop + 3/2*Math.PI;
 
-	// this whike and if blocks taken from the original arc source code of processing.
+	// this while and if blocks taken from the original arc source code of processing.
 	
     // make sure that we're starting at a useful point
     while (start < 0) {
